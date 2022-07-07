@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/app.js",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongodb": "^4.7.0",
+    "morgan": "^1.10.0",
+    "winston": "^3.8.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/node": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.19",
+    "prettier": "2.7.1"
+  }
+}
