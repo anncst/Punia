@@ -1,12 +1,12 @@
 import React from 'react'
-import { ServerMessage } from './components/ServerMessage'
+import { Home } from './components/Home'
+import Button from './components/Button/Button'
 
 function App() {
   return (
     <div>
-      Hello world!
-      <br />
-      <ServerMessage />
+      <Home />
+      <Button>Dodaj</Button>
     </div>
   )
 }
