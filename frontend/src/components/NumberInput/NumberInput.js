@@ -8,8 +8,9 @@ const NumberInput = ({
   value,
   id,
   onChange,
-  max = 10,
-  min = 0.01,
+  max,
+  min = 0,
+  step,
 }) => {
   return (
     <>
@@ -21,6 +22,7 @@ const NumberInput = ({
         onChange={onChange}
         max={max}
         min={min}
+        step={step}
         className={styles.numberInput}
       ></input>
       <label className={styles.label}>{label}</label>
@@ -36,5 +38,6 @@ NumberInput.propTypes = {
   onChange: PropTypes.func,
   max: PropTypes.number,
   min: PropTypes.number,
+  step: PropTypes.number,
 }
 export default NumberInput

@@ -8,8 +8,8 @@ function App() {
     <div>
       <Home />
       <Button>Dodaj</Button>
-      <NumberInput placeholder="4,0" label="kg" />
-      <NumberInput placeholder="200" label="gram" />
+      <NumberInput placeholder="4,00" label="kg" max="10" step="0.01" />
+      <NumberInput placeholder="200" label="gram" max="10" />
     </div>
   )
 }
