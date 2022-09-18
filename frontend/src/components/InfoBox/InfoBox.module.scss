@@ -1,0 +1,36 @@
+.box {
+  box-shadow: 0px 1px 1px 1px rgb(233, 232, 232);
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px;
+  width: 200px;
+  color: #5a5a5a;
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+
+.value {
+  font-size: 24px;
+}
+
+.unit {
+  padding: 4px;
+}
+
+.change {
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.date {
+  font-size: 12px;
+}
