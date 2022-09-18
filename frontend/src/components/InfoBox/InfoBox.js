@@ -15,6 +15,7 @@ const InfoBox = ({ text, value, date, unit, change, changeUnit }) => {
           <span className={styles.unit}>{unit}</span>
         </div>
         <div className={styles.change}>
+          <span className={styles.arrow}>▲</span>
           {change}
           {changeUnit}
         </div>
