@@ -1,46 +1,49 @@
-.box {
-  box-shadow: 0px 1px 1px 1px rgb(233, 232, 232);
+@import '../../colors.module.scss';
+@import '../../fontSize.module.scss';
+
+.wrapper {
+  box-shadow: 0px 1px 1px 1px $shadow;
   padding: 10px;
   border-radius: 6px;
   margin: 10px;
   width: 200px;
-  color: #5a5a5a;
+  color: $text;
+  display: flex;
+  flex-direction: column;
+  gap:10px
 }
 
-.contentBox {
+.valueContainer {
   display: flex;
   flex-direction: row;
-  display: inline-flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 12px;
 }
 
 .value {
-  font-size: 24px;
+  font-size: $large;
 }
 
 .change {
-  font-size: 12px;
+  font-size: $normal;
 }
 
-.textBox {
+.titleContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  display: inline-flex;
   flex-wrap: wrap;
-  display: inline-flex;
-  gap: 90px;
 }
 
 .date {
-  font-size: 12px;
+  font-size: $normal;
 }
 
 .green {
-  color: lawngreen;
+  color: $green;
 }
 
 .red {
-  color: red;
+  color: $red;
 }

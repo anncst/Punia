@@ -5,12 +5,12 @@ import { DateTime } from 'luxon'
 import styles from './InfoBox.module.scss'
 
 const InfoBox = ({ text, value, date, unit, change, changeUnit }) => (
-  <div className={styles.box}>
-    <div className={styles.textBox}>
-      <div className={styles.text}>{text}</div>
+  <div className={styles.wrapper}>
+    <div className={styles.titleContainer}>
+      <div>{text}</div>
       <div className={styles.date}>{date.toRelative()}</div>
     </div>
-    <div className={styles.contentBox}>
+    <div className={styles.valueContainer}>
       <div className={styles.value}>
         {value}
         <span className={styles.unit}>{unit}</span>
