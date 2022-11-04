@@ -1,4 +1,9 @@
 module.exports = {
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   env: {
     es2021: true,
     browser: true,
@@ -13,11 +18,15 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   rules: {
     'prettier/prettier': 'error',
     semi: ['error', 'never'],
     'prefer-arrow-callback': 'error',
     'import/prefer-default-export': 'off',
+    'arrow-body-style': ['error', 'as-needed'],
   },
 }

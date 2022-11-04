@@ -1,0 +1,49 @@
+@import '../../colors.module.scss';
+@import '../../fontSize.module.scss';
+
+.wrapper {
+  box-shadow: 0px 1px 1px 1px $shadow;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px;
+  width: 200px;
+  color: $text;
+  display: flex;
+  flex-direction: column;
+  gap:10px
+}
+
+.valueContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.value {
+  font-size: $large;
+}
+
+.change {
+  font-size: $normal;
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.date {
+  font-size: $normal;
+}
+
+.green {
+  color: $green;
+}
+
+.red {
+  color: $red;
+}
