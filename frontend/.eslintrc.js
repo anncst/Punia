@@ -28,5 +28,6 @@ module.exports = {
     'prefer-arrow-callback': 'error',
     'import/prefer-default-export': 'off',
     'arrow-body-style': ['error', 'as-needed'],
+    'react/self-closing-comp': 'error',
   },
 }

@@ -3,6 +3,7 @@ import { DateTime } from 'luxon'
 import { Home } from './components/Home'
 import Button from './components/Button/Button'
 import InfoBox from './components/InfoBox/InfoBox'
+import { NumberInput } from './components/NumberInput/NumberInput'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         date={DateTime.now()}
         color="green"
       />
+      <NumberInput label="Lubie punie" placeholder="Lubie Punie" />
     </div>
   )
 }

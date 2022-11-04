@@ -1,20 +1,23 @@
+@import '../../colors.module.scss';
+
 .numberInput {
-  border: 0.5px solid rgb(109, 157, 217);
+  border: 0.5px solid $blue;
   padding: 10px 2px 10px 80px;
-  color: black;
   text-align: end;
   border-radius: 6px;
   margin: 6px;
   width: 100px;
 }
+
 .numberInput::placeholder {
-  color: grey;
+  color: $placeholder;
 }
 
 .numberInput:focus {
-  outline: 1px solid rgb(84, 118, 160);
+  outline: 1px solid $outline;
   border-radius: 6px;
 }
+
 .label {
-  color: rgb(56, 56, 56);
+  color: $text;
 }
