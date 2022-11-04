@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { DateTime } from 'luxon'
 import styles from './InfoBox.module.scss'
 
 const InfoBox = ({ text, value, date, unit, change, changeUnit }) => (
   <div className={styles.box}>
     <div className={styles.textBox}>
       <div className={styles.text}>{text}</div>
-      <div className={styles.date}>{date.toLocaleString()}</div>
+      <div className={styles.date}>{date.toRelative()}</div>
     </div>
     <div className={styles.contentBox}>
       <div className={styles.value}>
@@ -32,7 +33,7 @@ const InfoBox = ({ text, value, date, unit, change, changeUnit }) => (
 
 InfoBox.propTypes = {
   text: PropTypes.string,
-  date: PropTypes.instanceOf(Date),
+  date: PropTypes.instanceOf(DateTime),
   value: PropTypes.number,
   unit: PropTypes.string,
   change: PropTypes.number,
