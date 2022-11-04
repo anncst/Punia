@@ -4,6 +4,8 @@ import { Home } from './components/Home'
 import Button from './components/Button/Button'
 import InfoBox from './components/InfoBox/InfoBox'
 import { NumberInput } from './components/NumberInput/NumberInput'
+import Radio from './components/Radio/Radio'
+import styles from './App.module.scss'
 
 function App() {
   return (
@@ -29,6 +31,11 @@ function App() {
         color="green"
       />
       <NumberInput label="Lubie punie" placeholder="Lubie Punie" />
+      <div className={styles.radioBox}>
+        <Radio id="200g" />
+        <Radio id="400g" />
+        <Radio id="600g" />
+      </div>
     </div>
   )
 }
