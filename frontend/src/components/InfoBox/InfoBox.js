@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './InfoBox.module.scss'
 
-const InfoBox = ({ text, value, date, unit, change, changeUnit, color }) => (
+const InfoBox = ({ text, value, date, unit, change, changeUnit }) => (
   <div className={styles.box}>
     <div className={styles.textBox}>
       <div className={styles.text}>{text}</div>
@@ -17,11 +17,11 @@ const InfoBox = ({ text, value, date, unit, change, changeUnit, color }) => (
       <div className={styles.change}>
         <span
           className={classNames({
-            [styles.green]: color === 'green',
-            [styles.red]: color === 'red',
+            [styles.green]: change > 0,
+            [styles.red]: change < 0,
           })}
         >
-          {color === 'green' ? '▲' : '▼'}
+          {change > 0 ? '▲' : '▼'}
         </span>
         {change}
         {changeUnit}
@@ -37,6 +37,5 @@ InfoBox.propTypes = {
   unit: PropTypes.string,
   change: PropTypes.number,
   changeUnit: PropTypes.string,
-  color: PropTypes.string,
 }
 export default InfoBox
