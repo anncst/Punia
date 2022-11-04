@@ -1,11 +1,11 @@
 import React from 'react'
-import { Home } from './components/Home'
 import Button from './components/Button/Button'
+import { Navbar } from './components/Navbar/Navbar'
 
 function App() {
   return (
     <div>
-      <Home />
+      <Navbar />
       <Button>Dodaj</Button>
     </div>
   )
