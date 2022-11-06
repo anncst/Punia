@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './Hamburger.module.scss'
 
-const Hamburger = () => {
-  const [isOpen, setOpen] = useState(false)
-
+const Hamburger = ({ setOpen, isOpen }) => {
   return (
     <button
       onClick={() => {
@@ -21,6 +20,10 @@ const Hamburger = () => {
       </div>
     </button>
   )
+}
+Hamburger.propTypes = {
+  isOpen: PropTypes.bool,
+  setOpen: PropTypes.func,
 }
 
 export default Hamburger
