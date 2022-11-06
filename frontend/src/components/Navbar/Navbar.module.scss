@@ -1,6 +1,45 @@
+$navbarHeight: 64px;
+
 .navbarContainer {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 10px;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px;
+  position: sticky;
+  height: $navbarHeight;
+  background-color: white;
 }
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.dropdown{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: $navbarHeight;
+  box-shadow: 0px 1px 0px 1px rgb(233, 232, 232);
+  border: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+}
+
+.text{
+  font-size: x-large;
+  padding: 10px;
+}
+
+.button{
+  background-color: white;
+  box-shadow: 0px 1px 1px 1px rgb(233, 232, 232);
+  padding:10px;
+  margin:4px;
+  border: 0;
+  border-radius: 8px;
+  font-size: large;
+}
+
