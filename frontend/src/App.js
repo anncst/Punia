@@ -4,6 +4,7 @@ import { Home } from './components/Home'
 import Button from './components/Button/Button'
 import InfoBox from './components/InfoBox/InfoBox'
 import { NumberInput } from './components/NumberInput/NumberInput'
+import { Slider } from './components/Slider/Slider'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         color="green"
       />
       <NumberInput label="Lubie punie" placeholder="Lubie Punie" />
+      <Slider min={1} max={100} value={24} />
     </div>
   )
 }
