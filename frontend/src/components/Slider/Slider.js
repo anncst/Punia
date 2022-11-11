@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import styles from './Slider.module.scss'
 
 export const Slider = ({ min, max }) => {
   const [value, setValue] = useState(50)
 
   return (
-    <div>
+    <div
+      className={styles.sliderBox}
+      style={{ '--progress-percent': `${value}%` }}
+    >
       <input
         type="range"
         min={min}
@@ -14,9 +18,9 @@ export const Slider = ({ min, max }) => {
         onChange={(event) => {
           setValue(+event.target.value)
         }}
-        className="slider"
+        className={styles.slider}
       />
-      <p>{value}%</p>
+      <div className={styles.value}>{value}%</div>
     </div>
   )
 }
