@@ -7,6 +7,12 @@ import { NumberInput } from './components/NumberInput/NumberInput'
 import { Chart } from './components/Chart/Chart'
 
 function App() {
+  const data = [
+    { name: 'Page A', uv: 400 },
+    { name: 'amu', uv: 200 },
+    { name: 'mniamu', uv: 300 },
+    { name: 'Page B', uv: 600 },
+  ]
   return (
     <div>
       <Home />
@@ -30,7 +36,7 @@ function App() {
         color="green"
       />
       <NumberInput label="Lubie punie" placeholder="Lubie Punie" />
-      <Chart title="tytul" />
+      <Chart title="Karma" data={data} />
     </div>
   )
 }

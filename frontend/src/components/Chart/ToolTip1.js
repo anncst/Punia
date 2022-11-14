@@ -4,7 +4,7 @@ import styles from './Chart.module.scss'
 
 export const Tooltip1 = ({ label }) => (
   <div className={styles.customTooltip}>
-    <p className="label">{label}</p>
+    <div className="label">{label}</div>
   </div>
 )
 

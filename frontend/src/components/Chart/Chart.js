@@ -8,8 +8,9 @@ export const Chart = ({ title, data }) =>
   data && (
     <div className={styles.chart}>
       <div className={styles.title}>{title}</div>
-      <LineChart width={200} height={200} data={data} border>
+      <LineChart width={300} height={200} data={data}>
         <Tooltip
+          wrapperStyle={{ outline: 'none' }}
           content={(state) => <Tooltip1 label={data[state.label]?.uv} />}
         />
         <Line type="monotone" dataKey="uv" stroke="#8884d8" />
