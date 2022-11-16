@@ -8,6 +8,6 @@ const schema = Joi.object({
 
 export const getWeight = async (req:Request, res:Response) => {
   const date = await schema.validateAsync(req.body)
-  const weight = repository.findById(date)
+  const weight = await repository.findById(date)
   res.json(weight)
  }

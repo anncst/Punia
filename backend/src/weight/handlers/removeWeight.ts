@@ -8,5 +8,5 @@ const schema = Joi.object({
 })
 export const removeWeight = async (req: Request, res: Response) => {
   const weight = await schema.validateAsync(req.body)
-  repository.deleteOne(weight)
+  await repository.deleteOne(weight)
 }
