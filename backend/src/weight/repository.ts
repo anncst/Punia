@@ -8,6 +8,6 @@ export const add = (value:number) => collection.insertOne({ value, date:new Date
 
 export const findById = (id: ObjectId) => collection.findOne({ _id: new ObjectId(id) })
 
-export const deleteOne = (id: ObjectId) => collection.deleteOne({_id: new ObjectId(id)})
+export const deleteOne = (date: Date) => collection.deleteOne({date})
 
 export const findByDates = (from: Date, to: Date) => collection.find({date: {$gte: from, $lte: to}})

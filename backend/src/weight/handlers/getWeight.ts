@@ -1,7 +1,13 @@
 import { Request, Response } from "express";
+import Joi from "joi";
 import * as repository from '../repository'
 
+const schema = Joi.object({
+  date: Joi.date()
+})
+
 export const getWeight = async (req:Request, res:Response) => {
-  const weight = await repository.findById(req.body.id)
+  const date = await schema.validateAsync(req.body)
+  const weight = repository.findById(date)
   res.json(weight)
  }

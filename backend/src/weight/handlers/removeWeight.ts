@@ -1,6 +1,12 @@
+import { ObjectID } from "bson";
 import { Request, Response } from "express";
+import Joi from "joi";
 import * as repository from '../repository'
 
-export const removeWeight = (req: Request, res: Response) => {
-  repository.deleteOne(req.body.id)
+const schema = Joi.object({
+  date: Joi.date()
+})
+export const removeWeight = async (req: Request, res: Response) => {
+  const weight = await schema.validateAsync(req.body)
+  repository.deleteOne(weight)
 }
