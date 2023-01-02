@@ -8,27 +8,29 @@ jobs:
   backend:
     name: Backend Quality Check
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Install dependencies
         run: yarn install
       - name: 'Run prettier'
-        working-directory: ./backend
         run: yarn prettier
       - name: 'Run eslint'
-        working-directory: ./backend
         run: yarn lint
 
   frontend:
     name: Frontend Quality Check
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Install dependencies
         run: yarn install
       - name: 'Run prettier'
-        working-directory: ./frontend
         run: yarn prettier
       - name: 'Run eslint'
-        working-directory: ./frontend
         run: yarn lint
