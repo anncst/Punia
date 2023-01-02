@@ -8,7 +8,6 @@ jobs:
   backend:
     name: Backend Quality Check
     runs-on: ubuntu-latest
-    if: github.event.head_commit.modified[0] == 'backend'
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
@@ -23,7 +22,6 @@ jobs:
   frontend:
     name: Frontend Quality Check
     runs-on: ubuntu-latest
-    if: github.event.head_commit.modified[0] == 'frontend'
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
