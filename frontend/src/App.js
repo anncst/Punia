@@ -32,9 +32,9 @@ function App() {
       />
       <NumberInput label="Lubie punie" placeholder="Lubie Punie" />
       <div className={styles.radioBox}>
-        <Radio id="200g" />
-        <Radio id="400g" />
-        <Radio id="600g" />
+        <Radio id="200g" name="food" />
+        <Radio id="400g" name="food" />
+        <Radio id="600g" name="food" />
       </div>
     </div>
   )
