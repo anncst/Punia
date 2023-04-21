@@ -4,15 +4,15 @@
   cursor: pointer;
   height: 40px;
   width: 40px;
-  padding:0px;
-  margin:0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .hamburger {
   color: black;
 }
 
-.hamburger > div {
+.hamburger > .hamburgerInner {
   position: relative;
   top: 0;
   left: 0;
@@ -22,8 +22,8 @@
   transition: all 0.4s ease;
 }
 
-.hamburger > div::before,
-.hamburger > div::after {
+.hamburger > .hamburgerInner::before,
+.hamburger > .hamburgerInner::after {
   content: '';
   position: absolute;
   left: 0px;
@@ -34,21 +34,21 @@
   transition: all 0.4s ease;
 }
 
-.hamburger > div::after {
+.hamburger > .hamburgerInner::after {
   top: 10px;
 }
 
-.hamburgerOpen > div {
+.hamburgerOpen > .hamburgerInner {
   background: rgba(0, 0, 0, 0);
 }
 
-.hamburgerOpen > div::before {
+.hamburgerOpen > .hamburgerInner::before {
   top: 0;
   transform: rotate(45deg);
   background: black;
 }
 
-.hamburgerOpen > div::after {
+.hamburgerOpen > .hamburgerInner::after {
   top: 0;
   transform: rotate(135deg);
   background: black;
