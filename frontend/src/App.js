@@ -4,11 +4,13 @@ import { Home } from './components/Home'
 import Button from './components/Button/Button'
 import InfoBox from './components/InfoBox/InfoBox'
 import { NumberInput } from './components/NumberInput/NumberInput'
+import { Slider } from './components/Slider/Slider'
 import Radio from './components/Radio/Radio'
 import styles from './App.module.scss'
 
 function App() {
   const [chosen, setChosen] = useState()
+  const [value, setValue] = useState(50)
   return (
     <div>
       <Home />
@@ -32,12 +34,14 @@ function App() {
         color="green"
       />
       <NumberInput label="Lubie punie" placeholder="Lubie Punie" />
+
       <div className={styles.radioBox}>
         <Radio id="200g" name="food" onChange={setChosen} />
         <Radio id="400g" name="food" onChange={setChosen} />
         <Radio id="600g" name="food" onChange={setChosen} />
       </div>
       <div>{chosen}</div>
+      <Slider min={1} max={100} value={value} setValue={setValue} />
     </div>
   )
 }
