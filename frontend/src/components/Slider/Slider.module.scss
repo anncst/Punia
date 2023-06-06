@@ -1,0 +1,61 @@
+@import '../../colors.module.scss';
+
+$height: 100px;
+$width: 150px;
+$thumb: #379858;
+$progress: #7ac982;
+
+.slider {
+  height: $height;
+  width: $width;
+  appearance: none;
+  -webkit-appearance: none;
+  transform: rotate(-90deg) translateY(calc($width / 2));
+  transform-origin: left;
+  position: absolute;
+  left: -27px;
+  bottom: -50px;
+}
+
+.sliderBox {
+  margin: 14px;
+  height: $width;
+  width: $height;
+  position: relative;
+}
+
+.slider::-webkit-slider-runnable-track {
+  width: $width;
+  height: $height;
+  background-color: $blue;
+  border: 1px solid $shadow;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: linear-gradient(
+    to right,
+    $progress 0%,
+    $progress var(--progress-percent),
+    white var(--progress-percent),
+    white 100%
+  );
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-top: calc($height / 2 - 10px / 2);
+  background-color: $thumb;
+  position: absolute;
+  left: calc(var(--progress-percent) - 10px / 2);
+}
+
+.value {
+  position: absolute;
+  bottom: calc(var(--progress-percent) - 10px / 2);
+  right: -38px;
+}
