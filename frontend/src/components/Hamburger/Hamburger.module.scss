@@ -9,10 +9,6 @@
 }
 
 .hamburger {
-  color: black;
-}
-
-.hamburger > .hamburgerInner {
   position: relative;
   top: 0;
   left: 0;
@@ -22,8 +18,8 @@
   transition: all 0.4s ease;
 }
 
-.hamburger > .hamburgerInner::before,
-.hamburger > .hamburgerInner::after {
+.hamburger::before,
+.hamburger::after {
   content: '';
   position: absolute;
   left: 0px;
@@ -34,21 +30,21 @@
   transition: all 0.4s ease;
 }
 
-.hamburger > .hamburgerInner::after {
+.hamburger::after {
   top: 10px;
 }
 
-.hamburgerOpen > .hamburgerInner {
+.hamburgerOpen {
   background: rgba(0, 0, 0, 0);
 }
 
-.hamburgerOpen > .hamburgerInner::before {
+.hamburgerOpen::before {
   top: 0;
   transform: rotate(45deg);
   background: black;
 }
 
-.hamburgerOpen > .hamburgerInner::after {
+.hamburgerOpen::after {
   top: 0;
   transform: rotate(135deg);
   background: black;

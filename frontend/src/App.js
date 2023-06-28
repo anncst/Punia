@@ -1,12 +1,17 @@
 import React from 'react'
-import Button from './components/Button/Button'
+import { NavbarTitleButton } from './components/Navbar/NavbarTitleButton'
 import { Navbar } from './components/Navbar/Navbar'
+import { NavbarContextProvider } from './components/Navbar/NavbarContext'
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Button>Dodaj</Button>
+      <NavbarContextProvider>
+        <>
+          <Navbar />
+          <NavbarTitleButton />
+        </>
+      </NavbarContextProvider>
     </div>
   )
 }
