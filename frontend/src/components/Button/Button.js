@@ -3,19 +3,22 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styles from './Button.module.scss'
 
-const Button = ({ children, color = 'blue' }) => {
-  return (
-    <button
-      className={classNames({
-        [styles.blue]: color === 'blue',
-        [styles.white]: color === 'white',
-      })}
-    >
-      {children}
-    </button>
-  )
-}
+const Button = ({ children, color = 'blue', onClick }) => (
+  <button
+    className={classNames({
+      [styles.blue]: color === 'blue',
+      [styles.white]: color === 'white',
+    })}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+)
 
-Button.propTypes = { children: PropTypes.node, color: PropTypes.string }
+Button.propTypes = {
+  children: PropTypes.node,
+  color: PropTypes.string,
+  onClick: PropTypes.func,
+}
 
 export default Button
