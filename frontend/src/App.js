@@ -7,14 +7,19 @@ import { NumberInput } from './components/NumberInput/NumberInput'
 import { Slider } from './components/Slider/Slider'
 import Radio from './components/Radio/Radio'
 import styles from './App.module.scss'
+import Modal from './components/Modal/Modal'
 
 function App() {
   const [chosen, setChosen] = useState()
   const [value, setValue] = useState(50)
+  const [isModalOpen, setModalOpen] = useState(false)
   return (
     <div>
       <Home />
-      <Button>Dodaj</Button>
+      <Button onClick={() => setModalOpen(true)}>Dodaj</Button>
+      {isModalOpen && (
+        <Modal onClose={() => setModalOpen(false)} title="Dodaj jeść" />
+      )}
       <InfoBox
         text="Waga"
         value={3.5}
