@@ -15,6 +15,10 @@ const Button = ({ children, color = 'blue', onClick }) => (
   </button>
 )
 
-Button.propTypes = { children: PropTypes.node, color: PropTypes.string }
+Button.propTypes = {
+  children: PropTypes.node,
+  color: PropTypes.string,
+  onClick: PropTypes.func,
+}
 
 export default Button

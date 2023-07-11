@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import CloseIcon from '@material-ui/icons'
+import CloseIcon from '@material-ui/icons/Close'
 import PropTypes from 'prop-types'
 import Button from '../Button/Button'
 import { Slider } from '../Slider/Slider'
@@ -14,16 +14,17 @@ const Modal = ({ onClose, title }) => {
 
   return (
     <div className={styles.modalBackground} onMouseDown={onClose}>
-      <button onClick={onClose}>
-        <CloseIcon />
-      </button>
       <div className={styles.modal} onMouseDown={stopEventPropagation}>
-        <h1>{title}</h1>
+        <div className={styles.header}>
+          <h1>{title}</h1>
+          <button onClick={onClose} className={styles.closeButton}>
+            <CloseIcon fontSize="inherit" />
+          </button>
+        </div>
         <NumberInput label="gram" placeholder="120" />
         <Slider min={1} max={100} value={value} setValue={setValue} />
         <Button>Dodaj</Button>
       </div>
-      <p className={styles.veryImportantComponent}>Punia nieładnie pachnie</p>
     </div>
   )
 }

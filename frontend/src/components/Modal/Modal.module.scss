@@ -1,24 +1,39 @@
-.modal{
-    background-color: white;
-    padding:50px;
-    border-radius: 5px;
+.modal {
+  background-color: white;
+  padding: 50px;
+  border-radius: 5px;
 }
 
-.modalBackground{
-    background-color: rgba(0,0,0,0.2);
-    position: absolute;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.modalBackground {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.veryImportantComponent {
-    position: absolute;
-    right: 10px;
-    bottom: 0;
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.closeButton {
+  background-color: transparent;
+  border: 0px;
+  transition: 1s ease-in-out;
+  z-index: 1000;
+  color: rgb(166, 0, 255);
+  font-size: 48px;
+}
+
+.closeButton:hover {
+  color: grey;
+  rotate: 360deg;
+  color: pink;
+  transform: scale(20);
 }
