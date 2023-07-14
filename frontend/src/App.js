@@ -18,7 +18,7 @@ function App() {
       <Home />
       <Button onClick={() => setModalOpen(true)}>Dodaj</Button>
       {isModalOpen && (
-        <Modal onClose={() => setModalOpen(false)} title="Dodaj jeść" />
+        <Modal onClose={() => setModalOpen(false)} title="Dodaj karmę" />
       )}
       <InfoBox
         text="Waga"

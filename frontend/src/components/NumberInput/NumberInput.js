@@ -12,7 +12,7 @@ export const NumberInput = ({
   min = 0,
   step,
 }) => (
-  <>
+  <div className={styles.numberInputBox}>
     <input
       id={id}
       placeholder={placeholder}
@@ -25,7 +25,7 @@ export const NumberInput = ({
       className={styles.numberInput}
     />
     <label className={styles.label}>{label}</label>
-  </>
+  </div>
 )
 
 NumberInput.propTypes = {

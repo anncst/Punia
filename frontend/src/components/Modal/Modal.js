@@ -16,14 +16,22 @@ const Modal = ({ onClose, title }) => {
     <div className={styles.modalBackground} onMouseDown={onClose}>
       <div className={styles.modal} onMouseDown={stopEventPropagation}>
         <div className={styles.header}>
-          <h1>{title}</h1>
+          <h1 className={styles.title}>{title}</h1>
           <button onClick={onClose} className={styles.closeButton}>
             <CloseIcon fontSize="inherit" />
           </button>
         </div>
-        <NumberInput label="gram" placeholder="120" />
-        <Slider min={1} max={100} value={value} setValue={setValue} />
-        <Button>Dodaj</Button>
+        <div className={styles.form}>
+          <NumberInput label="gram" placeholder="120" />
+          <div className={styles.orText}>lub</div>
+          {/* Tutaj Radio dać */}
+          <div className={styles.slider}>
+            <Slider min={1} max={100} value={value} setValue={setValue} />
+          </div>
+          <div className={styles.formButton}>
+            <Button>Dodaj</Button>
+          </div>
+        </div>
       </div>
     </div>
   )
