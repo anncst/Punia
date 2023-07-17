@@ -6,7 +6,6 @@ import { NavbarContext } from './NavbarContext'
 export const Navbar = () => {
   const navbarContext = useContext(NavbarContext)
   const [isOpen, setOpen] = useState(false)
-  console.log(navbarContext.navbarTitle)
   return (
     <div className={styles.navbarContainer}>
       <h1>{navbarContext.navbarTitle}</h1>

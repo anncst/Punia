@@ -6,11 +6,7 @@ export const NavbarTitleButton = () => {
   const navbarContext = useContext(NavbarContext)
   return (
     <Button
-      onClick={() =>
-        navbarContext.setNavbarTitle(
-          `Punia ma ${Math.round(Math.random() * 200)} pcheł`
-        )
-      }
+      onClick={() => navbarContext.setNavbarTitle(navbarContext.navBarTitle)}
     >
       Zmień tytuł
     </Button>
