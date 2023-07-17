@@ -14,25 +14,22 @@ import { AddWeightModal } from './components/AddWeightModal/AddWeightModal'
 function App() {
   const [chosen, setChosen] = useState()
   const [value, setValue] = useState(50)
-  const [isModalOpen, setModalOpen] = useState(false)
+  const [isFoodModalOpen, setFoodModalOpen] = useState(false)
+  const [isWeightModalOpen, setWeightModalOpen] = useState(false)
   return (
     <div>
       <Home />
-      <Button onClick={() => setModalOpen(true)}>Dodaj karmę</Button>
-      {isModalOpen && (
-        <Modal
-          onClose={() => setModalOpen(false)}
-          title="Dodaj karmę"
-          content={<AddFoodModal />}
-        />
+      <Button onClick={() => setFoodModalOpen(true)}>Dodaj karmę</Button>
+      {isFoodModalOpen && (
+        <Modal onClose={() => setFoodModalOpen(false)} title="Dodaj karmę">
+          <AddFoodModal />
+        </Modal>
       )}
-      <Button onClick={() => setModalOpen(true)}>Dodaj wagę</Button>
-      {isModalOpen && (
-        <Modal
-          onClose={() => setModalOpen(false)}
-          title="Dodaj wagę"
-          content={<AddWeightModal />}
-        />
+      <Button onClick={() => setWeightModalOpen(true)}>Dodaj wagę</Button>
+      {isWeightModalOpen && (
+        <Modal onClose={() => setWeightModalOpen(false)} title="Dodaj wagę">
+          <AddWeightModal />
+        </Modal>
       )}
       <InfoBox
         text="Waga"

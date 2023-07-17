@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import CloseIcon from '@material-ui/icons/Close'
 import styles from './Modal.module.scss'
 
-const Modal = ({ onClose, content, title }) => {
+const Modal = ({ onClose, children, title }) => {
   const stopEventPropagation = (event) => {
     event.stopPropagation()
   }
@@ -17,7 +17,7 @@ const Modal = ({ onClose, content, title }) => {
             <CloseIcon fontSize="inherit" />
           </button>
         </div>
-        {content}
+        {children}
       </div>
     </div>
   )
@@ -26,6 +26,6 @@ const Modal = ({ onClose, content, title }) => {
 Modal.propTypes = {
   onClose: PropTypes.func,
   title: PropTypes.string,
-  content: PropTypes.object,
+  children: PropTypes.node,
 }
 export default Modal
