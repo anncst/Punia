@@ -8,6 +8,8 @@ import { Slider } from './components/Slider/Slider'
 import Radio from './components/Radio/Radio'
 import styles from './App.module.scss'
 import Modal from './components/Modal/Modal'
+import { AddFoodModal } from './components/AddFoodModal/AddFoodModal'
+import { AddWeightModal } from './components/AddWeightModal/AddWeightModal'
 
 function App() {
   const [chosen, setChosen] = useState()
@@ -16,9 +18,21 @@ function App() {
   return (
     <div>
       <Home />
-      <Button onClick={() => setModalOpen(true)}>Dodaj</Button>
+      <Button onClick={() => setModalOpen(true)}>Dodaj karmę</Button>
       {isModalOpen && (
-        <Modal onClose={() => setModalOpen(false)} title="Dodaj karmę" />
+        <Modal
+          onClose={() => setModalOpen(false)}
+          title="Dodaj karmę"
+          content={<AddFoodModal />}
+        />
+      )}
+      <Button onClick={() => setModalOpen(true)}>Dodaj wagę</Button>
+      {isModalOpen && (
+        <Modal
+          onClose={() => setModalOpen(false)}
+          title="Dodaj wagę"
+          content={<AddWeightModal />}
+        />
       )}
       <InfoBox
         text="Waga"
