@@ -1,0 +1,19 @@
+.radio {
+  border: 1px solid black;
+  border-radius: 24px;
+  padding: 8px 20px;
+  margin: 4px;
+  color: rgb(56, 56, 56);
+  display: flex;
+}
+.radioContainer {
+  display: flex;
+}
+
+.input {
+  display: none;
+}
+
+.input:checked + .radio {
+  border: 1px solid rgb(109, 157, 217);
+}
