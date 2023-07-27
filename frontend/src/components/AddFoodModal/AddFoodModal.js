@@ -9,7 +9,7 @@ export const AddFoodModal = () => {
   const [value, setValue] = useState(50)
   const [chosen, setChosen] = useState()
   return (
-    <div className={styles.form}>
+    <div className={styles.foodForm}>
       <NumberInput label="gram" placeholder="120" />
       <div className={styles.orText}>lub</div>
       <div className={styles.radioBox}>
@@ -17,10 +17,14 @@ export const AddFoodModal = () => {
         <Radio id="400g" name="food" onChange={setChosen} />
         <Radio id="600g" name="food" onChange={setChosen} />
       </div>
-      <div className={styles.slider}>
-        <Slider min={1} max={100} value={value} setValue={setValue} />
-      </div>
-      <div className={styles.formButton}>
+      <Slider
+        min={1}
+        max={100}
+        value={value}
+        setValue={setValue}
+        className={styles.slider}
+      />
+      <div>
         <Button>Dodaj</Button>
       </div>
     </div>
