@@ -1,0 +1,15 @@
+@import '../../colors.module.scss';
+
+.weightForm {
+  box-shadow: 0px 1px 1px 1px $shadow;
+  margin: 4px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.weightNumberInput {
+  margin: 4px 0px 8px;
+}

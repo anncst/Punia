@@ -1,0 +1,29 @@
+@import '../../colors.module.scss';
+
+.title {
+  font-weight: normal;
+}
+
+.foodForm {
+  margin: 4px;
+  padding: 30px;
+  box-shadow: 0px 1px 1px 1px $shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.slider {
+  display: flex;
+  align-self: center;
+}
+
+.orText {
+  font-size: 24px;
+}
+
+.radioBox {
+  display: flex;
+  flex-direction: row;
+}

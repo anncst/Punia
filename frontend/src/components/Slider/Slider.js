@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import styles from './Slider.module.scss'
 
-export const Slider = ({ min, max, value, setValue }) => (
+export const Slider = ({ min, max, value, setValue, className }) => (
   <div
-    className={styles.sliderBox}
+    className={classNames(styles.sliderBox, className)}
     style={{ '--progress-percent': `${value}%` }}
   >
     <input
@@ -26,4 +27,5 @@ Slider.propTypes = {
   max: PropTypes.number,
   value: PropTypes.number,
   setValue: PropTypes.func,
+  className: PropTypes.string,
 }

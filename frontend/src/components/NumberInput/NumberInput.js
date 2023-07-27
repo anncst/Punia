@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import styles from './NumberInput.module.scss'
 
 export const NumberInput = ({
@@ -11,8 +12,9 @@ export const NumberInput = ({
   max,
   min = 0,
   step,
+  className,
 }) => (
-  <>
+  <div className={classNames(styles.numberInputBox, className)}>
     <input
       id={id}
       placeholder={placeholder}
@@ -25,7 +27,7 @@ export const NumberInput = ({
       className={styles.numberInput}
     />
     <label className={styles.label}>{label}</label>
-  </>
+  </div>
 )
 
 NumberInput.propTypes = {
@@ -37,4 +39,5 @@ NumberInput.propTypes = {
   max: PropTypes.number,
   min: PropTypes.number,
   step: PropTypes.number,
+  className: PropTypes.string,
 }
