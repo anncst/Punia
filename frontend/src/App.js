@@ -8,10 +8,10 @@ import { Chart } from './components/Chart/Chart'
 
 function App() {
   const data = [
-    { name: 'Page A', uv: 400 },
-    { name: 'amu', uv: 200 },
-    { name: 'mniamu', uv: 300 },
-    { name: 'Page B', uv: 600 },
+    { name: 'Page A', value: 400 },
+    { name: 'amu', value: 200 },
+    { name: 'mniamu', value: 300 },
+    { name: 'Page B', value: 600 },
   ]
   return (
     <div>

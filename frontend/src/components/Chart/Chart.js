@@ -1,22 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { LineChart, Line, Tooltip } from 'recharts'
+import { LineChart, Line, Tooltip as RechartsTooltip } from 'recharts'
 import styles from './Chart.module.scss'
-import { Tooltip1 } from './ToolTip1'
+import { Tooltip } from './ToolTip'
 
-export const Chart = ({ title, data }) =>
-  data && (
-    <div className={styles.chart}>
-      <div className={styles.title}>{title}</div>
-      <LineChart width={300} height={200} data={data}>
-        <Tooltip
-          wrapperStyle={{ outline: 'none' }}
-          content={(state) => <Tooltip1 label={data[state.label]?.uv} />}
-        />
-        <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-      </LineChart>
-    </div>
-  )
+export const Chart = ({ title, data }) => (
+  <div className={styles.chart}>
+    <div className={styles.title}>{title}</div>
+    <LineChart width={300} height={200} data={data}>
+      <RechartsTooltip
+        wrapperStyle={{ outline: 'none' }}
+        content={(state) => <Tooltip label={data[state.label]?.value} />}
+      />
+      <Line type="monotone" dataKey="value" stroke="#8884d8" />
+    </LineChart>
+  </div>
+)
 
 Chart.propTypes = {
   title: PropTypes.string,
